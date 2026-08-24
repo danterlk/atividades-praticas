@@ -1,0 +1,4 @@
+:root { --menu-blue: #31b7ff; }
+.voltar-menu { position: fixed; z-index: 1000; top: 18px; left: 18px; display: inline-flex; align-items: center; gap: 8px; padding: 10px 15px; border: 1px solid rgba(98, 210, 255, .75); border-radius: 999px; color: #effaff; background: rgba(3, 18, 38, .88); box-shadow: 0 0 18px rgba(49, 183, 255, .28); backdrop-filter: blur(10px); font: 600 .85rem/1 Arial, sans-serif; letter-spacing: .03em; text-decoration: none; transition: transform .2s ease, background .2s ease, box-shadow .2s ease; }
+.voltar-menu:hover, .voltar-menu:focus-visible { color: #fff; background: #087fc3; box-shadow: 0 0 25px rgba(49, 183, 255, .7); outline: none; transform: translateY(-2px); }
+@media (max-width: 520px) { .voltar-menu { top: 10px; left: 10px; padding: 9px 12px; } }

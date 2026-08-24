@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Menu de navegação para os exercícios práticos de JavaScript.">
+    <title>Central de Exercícios</title>
+    <link rel="stylesheet" href="menu.css">
+    <style>
+        * { box-sizing: border-box; }
+        body { min-height: 100vh; margin: 0; overflow-x: hidden; color: #eaf8ff; background: #020b1a; font-family: Arial, sans-serif; }
+        body::before, body::after { content: ""; position: fixed; z-index: -1; border-radius: 50%; pointer-events: none; }
+        body::before { width: 520px; height: 520px; top: -220px; left: -170px; background: radial-gradient(circle, rgba(0, 170, 255, .36), transparent 68%); }
+        body::after { width: 620px; height: 620px; right: -240px; bottom: -280px; background: radial-gradient(circle, rgba(21, 66, 255, .32), transparent 68%); }
+        .grade { position: fixed; inset: 0; z-index: -2; opacity: .36; background-image: linear-gradient(rgba(47,181,255,.12) 1px, transparent 1px), linear-gradient(90deg, rgba(47,181,255,.12) 1px, transparent 1px); background-size: 42px 42px; mask-image: linear-gradient(to bottom, #000, transparent); }
+        main { width: min(1120px, calc(100% - 40px)); margin: 0 auto; padding: 76px 0 64px; }
+        .topo { max-width: 700px; margin-bottom: 38px; }
+        .sinal { display: inline-flex; gap: 9px; align-items: center; margin-bottom: 14px; color: #70d6ff; font-size: .78rem; font-weight: bold; letter-spacing: .16em; text-transform: uppercase; }
+        .sinal::before { content: ""; width: 9px; height: 9px; border-radius: 50%; background: #4ee2ff; box-shadow: 0 0 13px #4ee2ff; }
+        h1 { margin: 0; color: #fff; font-size: clamp(2.25rem, 6vw, 4.8rem); line-height: .98; letter-spacing: -.06em; }
+        .topo p { margin: 20px 0 0; color: #a9c8dc; font-size: 1.08rem; line-height: 1.65; }
+        .exercicios { display: grid; grid-template-columns: repeat(auto-fit, minmax(215px, 1fr)); gap: 15px; }
+        .exercicio { position: relative; min-height: 170px; display: flex; flex-direction: column; justify-content: space-between; padding: 22px; overflow: hidden; border: 1px solid rgba(75,190,255,.26); border-radius: 18px; color: inherit; background: linear-gradient(145deg, rgba(12,48,88,.84), rgba(4,19,42,.78)); box-shadow: inset 0 1px rgba(255,255,255,.06), 0 14px 35px rgba(0,0,0,.2); text-decoration: none; transition: transform .22s ease, border-color .22s ease, box-shadow .22s ease; }
+        .exercicio::after { content: ""; position: absolute; width: 130px; height: 130px; top: -65px; right: -45px; border-radius: 50%; background: radial-gradient(circle, rgba(53,190,255,.25), transparent 67%); }
+        .exercicio:hover, .exercicio:focus-visible { border-color: #5ed0ff; box-shadow: inset 0 1px rgba(255,255,255,.12), 0 0 0 1px rgba(94,208,255,.2), 0 17px 38px rgba(0,113,190,.22); outline: none; transform: translateY(-5px); }
+        .numero { color: #64d5ff; font-size: .78rem; font-weight: bold; letter-spacing: .12em; }
+        .exercicio h2 { max-width: 18ch; margin: 26px 0 0; color: #fff; font-size: 1.2rem; line-height: 1.24; }
+        .abrir { margin-top: 18px; color: #86ddff; font-size: .9rem; font-weight: bold; }
+        .abrir::after { content: "  →"; font-size: 1.1rem; }
+        footer { margin-top: 36px; color: #7a9bb2; font-size: .84rem; text-align: center; }
+    </style>
+</head>
+<body>
+    <div class="grade"></div>
+    <main>
+        <header class="topo"><span class="sinal">Central online</span><h1>Exercícios práticos</h1><p>Selecione uma atividade para abrir seu laboratório JavaScript.</p></header>
+        <nav class="exercicios" aria-label="Lista de exercícios">
+            <a class="exercicio" href="exercicio%2001/index.html"><span class="numero">EXERCÍCIO 01</span><h2>Testando JavaScript</h2><span class="abrir">Abrir atividade</span></a>
+            <a class="exercicio" href="exercicio%2002/index.html"><span class="numero">EXERCÍCIO 02</span><h2>Modo claro e escuro</h2><span class="abrir">Abrir atividade</span></a>
+            <a class="exercicio" href="exercicio%2003/index.html"><span class="numero">EXERCÍCIO 03</span><h2>Fonte e estilo</h2><span class="abrir">Abrir atividade</span></a>
+            <a class="exercicio" href="exercicio%2004/index.html"><span class="numero">EXERCÍCIO 04</span><h2>Nome do aluno</h2><span class="abrir">Abrir atividade</span></a>
+            <a class="exercicio" href="exercicio%2005/index.html"><span class="numero">EXERCÍCIO 05</span><h2>Contador de cliques</h2><span class="abrir">Abrir atividade</span></a>
+            <a class="exercicio" href="exercicio%2006/index.html"><span class="numero">EXERCÍCIO 06</span><h2>Calculadora simples</h2><span class="abrir">Abrir atividade</span></a>
+            <a class="exercicio" href="exercicio%2007/index.html"><span class="numero">EXERCÍCIO 07</span><h2>Conversor de temperatura</h2><span class="abrir">Abrir atividade</span></a>
+            <a class="exercicio" href="exercicio%2008/index.html"><span class="numero">EXERCÍCIO 08</span><h2>Média do aluno</h2><span class="abrir">Abrir atividade</span></a>
+            <a class="exercicio" href="exercicio%2009/index.html"><span class="numero">EXERCÍCIO 09</span><h2>Validação de nome</h2><span class="abrir">Abrir atividade</span></a>
+            <a class="exercicio" href="exercicio%2010/index.html"><span class="numero">EXERCÍCIO 10</span><h2>Login simples</h2><span class="abrir">Abrir atividade</span></a>
+            <a class="exercicio" href="exercicio%2011/index.html"><span class="numero">EXERCÍCIO 11</span><h2>Contador com laço</h2><span class="abrir">Abrir atividade</span></a>
+            <a class="exercicio" href="exercicio%2012/index.html"><span class="numero">EXERCÍCIO 12</span><h2>Tipos de dados</h2><span class="abrir">Abrir atividade</span></a>
+            <a class="exercicio" href="exercicio-13/index.html"><span class="numero">EXERCÍCIO 13</span><h2>Laboratório de variáveis</h2><span class="abrir">Abrir atividade</span></a>
+            <a class="exercicio" href="exercicio-14/index.html"><span class="numero">EXERCÍCIO 14</span><h2>Painel de visitas</h2><span class="abrir">Abrir atividade</span></a>
+            <a class="exercicio" href="exercicio-15/index.html"><span class="numero">EXERCÍCIO 15</span><h2>Calculadora de desconto</h2><span class="abrir">Abrir atividade</span></a>
+        </nav>
+        <footer>15 atividades disponíveis para exploração.</footer>
+    </main>
+</body>
+</html>
